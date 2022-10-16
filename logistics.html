@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel='stylesheet' href='css/nprogress.css' />
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>与物流的关系-NovelAI Stable Diffusion</title>
+</head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-theme-primary-pink mdui-theme-accent-red">
+    <div class="mdui-dialog" id="colorChange">
+        <div class="mdui-dialog-title">关于</div>
+        <div class="mdui-dialog-content">
+            相关仓库及支持链接：
+            <ul class="mdui-list">
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://t.me/StableDiffusion_CN">https://t.me/StableDiffusion_CN</a>
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">https://github.com/AUTOMATIC1111/stable-diffusion-webui</a>
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://gist.github.com/crosstyan/f912612f4c26e298feec4a2924c41d99">https://gist.github.com/crosstyan/f912612f4c26e298feec4a2924c41d99</a>
+            </ul>
+            网页使用的开源库：
+            <ul class="mdui-list">
+                <a class="mdui-list-item mdui-ripple" href="https://www.mdui.org/">mdui</a>
+                <a class="mdui-list-item mdui-ripple" href="https://github.com/Watfaq/PowerSession">PowerSession</a>
+                <a class="mdui-list-item mdui-ripple" href="https://asciinema.org">asciinema</a>
+                <a class="mdui-list-item mdui-ripple" href="https://github.com/madmalik/mononoki">mononoki</a>
+            </ul>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+        </div>
+    </div>
+    <div class="mdui-drawer mdui-drawer-close" id="drawer-left">
+        <ul class="mdui-list">
+            <li class="mdui-subheader"></li>
+            <a class="mdui-list-item mdui-ripple" href="index.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons ">move_to_inbox</i>
+                <div class="mdui-list-item-content">主页</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="simulate.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons">check</i>
+                <div class="mdui-list-item-content">模拟</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple mdui-list-item-active" href="logistics.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons">business</i>
+                <div class="mdui-list-item-content">与物流的联系</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="copyright.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons ">copyright</i>
+                <div class="mdui-list-item-content">版权说明</div>
+            </a>
+        </ul>
+    </div>
+
+    <div class="mdui-appbar mdui-color-theme mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme">
+            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#drawer-left'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </button>
+            <span class="mdui-typo-title">NovelAI</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a onclick="javascript:window.location.reload();" class="mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">refresh</i>
+            </a>
+            <button mdui-dialog="{target:'#colorChange'}" class="mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="main mdui-container">
+        <h1 class="title mdui-text-color-theme">表单</h1>
+        <div class="intro mdui-typo">
+            物流行业有许多表单、文档数据，人工智能技术中的计算机视觉和深度学习就可以在这一场景中应用。<br><br>
+
+            比如腾讯云的OCR技术：通过计算机视觉结构化识别表单内容，能够快速便捷地完成纸质报表单据的电子化，大幅避免人工输单；对文档扫描件或者图片中的印章进行位置检测，内容提取，实现自动化一致性比对；独有的手写文字识别技术可以精准识别出手写文字、数字、证件号码、日期等，实现带有手写文字的扫描件或图片数字化处理。
+        </div>
+        <h1 class="title mdui-text-color-theme">园区管理</h1>
+        <div class="intro mdui-typo">
+            表单处理完，货物进入园区。随着IOT、5G等技术的应用，人工智能在园区管理上同样可以发挥重要作用，比如监测、采集场院内车辆信息，提供车辆装载率、车辆调度、运力监测和场地人员能效等基础数据，优化运力成本；再比如对人员工作情况进行管理，规避员工不规范甚至危险的操作。
+            <br><br>
+            2018年，菜鸟网络曾宣布全面启动物流IoT（物联网）战略，并向全行业发布了全球首个基于物流IoT的“未来园区”。这是IoT、边缘计算和人工智能等前沿技术第一次在物流领域的大规模应用，“未来园区”可以识别每一个烟头、监控每一个井盖，实时保障园区安全、高效运转。
+        </div>
+        <h1 class="title mdui-text-color-theme">搬运</h1>
+        <div class="intro mdui-typo">
+            从园区进入仓内，其中必然要发生的一个动作就是装卸。货物识别+机器人与自动化分拣则可大大降低人类的劳动量。举例来说，AMR（Automatic Mobile
+            Robot）即自主移动机器人，是目前发展和应用较快的技术。与传统AGV不同的是，AMR的运行不需要地面二维码、磁条等预设装置，SLAM系统定位导航为其装上了“一双眼睛”，让其可以实现高效的搬运和拣货作业。
+        </div>
+        <h1 class="title mdui-text-color-theme">装卸</h1>
+        <div class="intro mdui-typo">
+            2019年，顺丰对外发布的“慧眼神瞳”一度备受关注，这也是顺丰科技人工智能计算机视觉成果在业务场景的落地突破。其实简单地说，“慧眼神瞳”就是利用各种视频和图像进行自动化分析的人工智能系统。比如中转场的装卸口环节，将摄像机部署在装卸口，通过分析车辆到离卡行为、车牌识别、车辆装载率、人员工作能效等基础数据，就可以刻画出装卸口作业场景的完整生产要素，将所有作业数据线上化，持续优化各项运营成本，优化运转效率。
+        </div>
+        <h1 class="title mdui-text-color-theme">仓储系统</h1>
+        <div class="intro mdui-typo">
+            在仓内投入大量的机器人等设备，就需要一个系统进行管理，就像身体需要大脑。
+            <br><br>
+            旷视科技就曾发布AIoT操作系统——河图（HETU）。据介绍，河图是旷视科技推出的首个智能机器人网络协同大脑是一套致力于机器人与物流、制造业务快速集成，一站式解决规划、仿真、实施、运营全流程的操作系统。旷视河图与机器人硬件设备相结合，不仅体现了河图对整个作业节奏的控制、连接运维等能力，实现了人、设备、订单、空间、货的高效协同。
+        </div>
+        <h1 class="title mdui-text-color-theme">无人驾驶</h1>
+        <div class="intro mdui-typo">
+            运输是物流的重要一环，人工智能在该环节的应用也表现在多个方面，比如无人驾驶、车队管理、智能副驾等等。以最熟知的无人驾驶为例，要实现无人驾驶，要依靠三个环节感知、处理以及执行，这均离不开人工智能。</div>
+        <h1 class="title mdui-text-color-theme">装载</h1>
+        <div class="intro mdui-typo">
+            除了安全，运输另外一个关注点在于装载率，如何能装更多的货？基于大数据积累和AI深度学习算法，G7数字货舱就可以实时感知货物量方，自动记录量方变化曲线，时刻知晓装载率。通过AI摄像头和高精度传感器对厢内货物进行图像三维建模，保证货物运输状态全程可视化，并智能管控装车过程和装车进度。
+        </div>
+        <h1 class="title mdui-text-color-theme">无人机配送</h1>
+        <div class="intro mdui-typo">
+            配送是货物流动过程的最后环节，也是物流链条上人力资源投入最重的环节。目前，在这一环节，常见的科技创新是无人机与无人车配送。
+            <br><br>
+            亚马逊于2013年提出的Prime
+            Air业务，将无人机引入物流领域。国内顺丰、京东、中通等企业也纷纷跟进。2019年5月，中外运敦豪与亿航智能签署战略合作协议，并发布了国内首个全自动智能无人机物流解决方案。当时，物流指闻在现场也见识了无人机+智能包裹柜的创新应用。
+        </div>
+        <h1 class="title mdui-text-color-theme">无人车配送</h1>
+        <div class="intro mdui-typo">
+            无人配送车是应用在快递快运配送与即时物流配送中低速自动驾驶无人车，其核心技术架构与汽车自动驾驶系统基本一致。在新闻当中，我们也时常听说京东、菜鸟、美团、苏宁等无人配送车在小区校园等封闭区域配送、快递员接驳等多种场景中应用和测试。
+            <br><br>
+            比如，2016年就有一款名为菜鸟小G的自动送包裹的机器人在阿里西溪园区亮相。2019年8月，苏宁物流对外公开5G无人配送车的路测实况，这也是5G技术应用从实验阶段走向商业化应用。
+        </div>
+    </div>
+    </div>
+    <script src='js/nprogress.js'></script>
+    <script src="js/mdui.min.js"></script>
+</body>
+<footer>
+    <div id="copyright">
+        <p>&COPY;soloopooo@soloop.ooo,2022.</p>
+        <a href="https://soloop.ooo">soloop.ooo</a>
+        <p><br></p>
+    </div>
+</footer>
+
+</html>

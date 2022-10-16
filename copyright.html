@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel='stylesheet' href='css/nprogress.css' />
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>版权说明-NovelAI Stable Diffusion</title>
+</head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-theme-primary-pink mdui-theme-accent-red">
+    <div class="mdui-dialog" id="colorChange">
+        <div class="mdui-dialog-title">关于</div>
+        <div class="mdui-dialog-content">
+            相关仓库及支持链接：
+            <ul class="mdui-list">
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://t.me/StableDiffusion_CN">https://t.me/StableDiffusion_CN</a>
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">https://github.com/AUTOMATIC1111/stable-diffusion-webui</a>
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://gist.github.com/crosstyan/f912612f4c26e298feec4a2924c41d99">https://gist.github.com/crosstyan/f912612f4c26e298feec4a2924c41d99</a>
+            </ul>
+            网页使用的开源库：
+            <ul class="mdui-list">
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://www.mdui.org/">mdui</a>
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://github.com/Watfaq/PowerSession">PowerSession</a>
+                <a class="mdui-list-item mdui-ripple"
+                    href="https://asciinema.org">asciinema</a>
+                    <a class="mdui-list-item mdui-ripple" href="https://github.com/madmalik/mononoki">mononoki</a>
+            </ul>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+        </div>
+    </div>
+    <div class="mdui-drawer mdui-drawer-close" id="drawer-left">
+        <ul class="mdui-list">
+            <li class="mdui-subheader"></li>
+            <a class="mdui-list-item mdui-ripple" href="index.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons ">move_to_inbox</i>
+                <div class="mdui-list-item-content">主页</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="simulate.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons">check</i>
+                <div class="mdui-list-item-content">模拟</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="logistics.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons">business</i>
+                <div class="mdui-list-item-content">与物流的联系</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple mdui-list-item-active" href="copyright.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons ">copyright</i>
+                <div class="mdui-list-item-content">版权说明</div>
+            </a>
+        </ul>
+    </div>
+
+    <div class="mdui-appbar mdui-color-theme mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme">
+            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#drawer-left'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </button>
+            <span class="mdui-typo-title">NovelAI</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a onclick="javascript:window.location.reload();" class="mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">refresh</i>
+            </a>
+            <button mdui-dialog="{target:'#colorChange'}" class="mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="main mdui-container">
+        <br><br><br>
+        <div class="intro mdui-typo">
+            Copyright (c) 2022 Robin Rombach and Patrick Esser and contributors<br>
+            <br>
+            CreativeML Open RAIL-M<br>
+            日期：2022年8月22日
+            <br>
+            <br>
+
+            担心模型滥用又要争取开放负责任的使用模型，从开源许可证受到启发，我们添加了如下限制。
+            <br>
+            类似GPL的分发要求，最少包含这个许可证。
+            <br>
+            1. 本许可规定了模型（及其衍生品）的使用，并以与模型相关的模型卡为依据。<br><br>
+            2. 版权许可的授予。根据本许可的条款和条件，每个贡献者特此授予您永久的、全球性的、非排他性的、免费的、不可撤销的版权许可，以复制、准备、公开展示、公开表演、分许可和分发补充材料、模型和模型的衍生物。
+            <br><br>3.
+            专利许可的授予。根据本许可的条款和条件，在适用的情况下，每个贡献者特此授予您永久的、全球性的、非排他性的、不收费的、不可撤销的（本段所述除外）专利许可，以制作、已制作、使用、提供销售、销售、进口。和以其他方式转让模型和补充材料，该许可仅适用于该贡献者可许可的、因其贡献单独或因其贡献与所提交的模型结合而必然受到侵犯的专利权利要求。如果您对任何实体提起专利诉讼（包括诉讼中的交叉索赔或反索赔），声称模型和/或补充材料或包含在模型和/或补充材料中的贡献构成直接或共同的专利侵权，则根据本许可授予您的模型和/或作品的任何专利许可应自该诉讼被主张或提起之日起终止。
+            <br><br>
+            4. 您如果分发，需要给接受者提供一份该授权原文的副本。
+            <br><br>
+            5. 必须对修改的文件说明修改了哪里。
+            <br><br>
+            6. 您必须保留所有版权、专利、商标和署名通知，但不包括与模型或模型衍生产品的任何部分无关的通知。
+            <br><br>
+            7.
+            您可以在您的修改中加入您自己的版权声明，并可以为您的修改的使用、复制或分发，或为整个模型的任何此类衍生产品，提供额外的或不同的许可条款和条件--尊重第4.a.段，但您对模型的使用、复制和分发必须符合本许可中规定的条件。
+            <br><br>
+            8. 您产生的输出。除本文所述外，许可方对您使用模型产生的输出不主张任何权利。您对您生成的输出及其后续使用负责。对输出的任何使用都不能违反许可证中所述的任何规定。
+            <br><br>
+            9. 商标及相关。本许可中的任何内容都不允许您使用许可人的商标、商号、标识或以其他方式暗示认可或误导各方之间的关系；任何未在此明确授予的权利都由许可人保留。
+            <br><br>
+            10. 任何对原模型的修改由修改者承担后果。
+            <br><br>
+            11. 使用该模型造成的直接或间接法律问题后果自负。
+            <br><br>
+            12. 可以提供收费服务，但后果自负，而且只能以您的名义提供服务。
+            <br><br>
+            13. 如果本许可的任何条款被认为是无效的、非法的或不可执行的，其余条款应不受影响，仍然有效，就像该条款没有在这里规定一样。
+            <br><br>
+            14. 附加使用限制
+            <br><br>
+            您同意不以下列方式使用本模型或本模型的衍生物。
+            <br>- 以任何方式违反任何适用的国家、联邦、州、地方或国际法律或法规。
+            <br>- 为剥削、伤害或试图以任何方式剥削或伤害未成年人的目的。
+            <br>- 以伤害他人为目的，生成或传播可核实的虚假信息和/或内容。
+            <br>- 产生或传播可用于伤害个人的个人身份信息。
+            <br>- 诽谤、诋毁或以其他方式骚扰他人。
+            <br>- 用于对个人的法律权利产生不利影响的完全自动化决策，或以其他方式创建或修改具有约束力的、可执行的义务。
+            <br>- 用于任何旨在或具有基于在线或离线社会行为或已知或预测的个人或个性特征而歧视或伤害个人或群体的用途。
+            <br>- 利用特定群体基于其年龄、社会、身体或精神特征的任何弱点，以实质性地扭曲与该群体有关的人的行为，从而导致或可能导致该人或其他人的身体或心理伤害。
+            <br>- 用于任何旨在或具有基于受法律保护的特征或类别歧视个人或群体的效果的用途。
+            <br>- 提供医疗建议和医疗结果解释。
+            <br>- 产生或传播信息，用于司法行政、执法、移民或庇护程序，如预测一个人将实施欺诈/犯罪承诺（例如，通过文本分析，在文件中的断言之间得出因果关系，不加区分地和任意地使用）。
+            <br><br>
+        </div>
+    </div>
+    <script src='js/nprogress.js'></script>
+    <script src="js/mdui.min.js"></script>
+</body>
+<footer>
+    <div id="copyright">
+        <p>&COPY;soloopooo@soloop.ooo,2022.</p>
+        <a href="https://soloop.ooo">soloop.ooo</a>
+        <p><br></p>
+    </div>
+</footer>
+
+</html>

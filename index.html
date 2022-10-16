@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel='stylesheet' href='css/nprogress.css' />
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mononoki.css">
+    <link rel="stylesheet" href="css/3dgallery.css">
+
+    <style>
+        #modal {
+            display: none;
+            width:100%;
+            height:100vh;
+        }
+        .modal {
+            width: 50%;
+            height: 80%;
+            z-index: 9999;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color:rgb(0,0,0,0.65);
+
+        }
+        
+        .modal img {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+            display: block;
+            padding: 10px;
+            margin: auto;
+            overflow: auto;
+            max-width: 80%;
+            max-height: 80%;
+            box-shadow: 0 2px 6px rgb(0, 0, 0, 0.2), 0 10px 20px rgb(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border: 1px solid white;
+        }
+        
+        @keyframes zoom {
+            from {transform: scale(0.1)}
+            to {transform: scale(1)}
+        }
+        </style>
+    <title>主页-NovelAI Stable Diffusion</title>
+</head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-theme-primary-pink mdui-theme-accent-red">
+    <div class="mdui-container mdui-dialog" id='modal'>
+        <div class='modal' id='modalw'>
+            <img id='bgImg' class="mdui-center mdui-valign"/>
+        </div>
+    </div>
+    <div class="mdui-drawer mdui-drawer-close" id="drawer-left">
+        <ul class="mdui-list">
+            <li class="mdui-subheader"></li>
+            <a class="mdui-list-item mdui-ripple mdui-list-item-active" href="index.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons ">move_to_inbox</i>
+                <div class="mdui-list-item-content">主页</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="simulate.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons">check</i>
+                <div class="mdui-list-item-content">模拟</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="logistics.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons">business</i>
+                <div class="mdui-list-item-content">与物流的联系</div>
+            </a>
+            <a class="mdui-list-item mdui-ripple" href="copyright.html">
+                <i class="mdui-list-item-icon mdui-icon material-icons ">copyright</i>
+                <div class="mdui-list-item-content">版权说明</div>
+            </a>
+        </ul>
+    </div>
+
+    <div class="mdui-appbar mdui-color-theme mdui-appbar-fixed">
+        <div class="mdui-toolbar mdui-color-theme">
+            <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#drawer-left'}">
+                <i class="mdui-icon material-icons">menu</i>
+            </button>
+            <span class="mdui-typo-title">NovelAI</span>
+            <div class="mdui-toolbar-spacer"></div>
+            <a onclick="javascript:window.location.reload();" class="mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">refresh</i>
+            </a>
+            <button mdui-dialog="{target:'#colorChange'}" class="mdui-btn mdui-btn-icon mdui-ripple">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="main mdui-container">
+        <div class="mdui-dialog" id="colorChange">
+            <div class="mdui-dialog-title">关于</div>
+            <div class="mdui-dialog-content">
+                相关仓库及支持链接：
+                <ul class="mdui-list">
+                    <a class="mdui-list-item mdui-ripple"
+                        href="https://t.me/StableDiffusion_CN">https://t.me/StableDiffusion_CN</a>
+                    <a class="mdui-list-item mdui-ripple"
+                        href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">https://github.com/AUTOMATIC1111/stable-diffusion-webui</a>
+                    <a class="mdui-list-item mdui-ripple"
+                        href="https://gist.github.com/crosstyan/f912612f4c26e298feec4a2924c41d99">https://gist.github.com/crosstyan/f912612f4c26e298feec4a2924c41d99</a>
+                </ul>
+                网页使用的开源库：
+                <ul class="mdui-list">
+                    <a class="mdui-list-item mdui-ripple"
+                        href="https://www.mdui.org/">mdui</a>
+                    <a class="mdui-list-item mdui-ripple"
+                        href="https://github.com/Watfaq/PowerSession">PowerSession</a>
+                    <a class="mdui-list-item mdui-ripple"
+                        href="https://asciinema.org">asciinema</a>
+                        <a class="mdui-list-item mdui-ripple" href="https://github.com/madmalik/mononoki">mononoki</a>
+                </ul>
+            </div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+            </div>
+        </div>
+        <h3 class="title mdui-text-color-theme">点击左上角三明治按钮，可切换其他页面。右上角按钮内有引用的仓库信息。</h3>
+        <h1 class="title mdui-text-color-theme">NovelAI是？</h1>
+        <div class="intro mdui-typo">NovelAI是Anlatan于2022年10月3日推出的深度学习AI绘图软件，可以用文字来绘画出图像，采取订阅制的云端软件，功能上与DALL-E类似。 </div>
+        <h1 class="title mdui-text-color-theme">NovelAI功能？</h1>
+        <div class="intro mdui-typo">
+            NovelAI是基于Stable
+            Diffusion的开源软件，属于扩散模组，功能与OpenAI的DALL-E类似，可以输入详细的文字说明或关键字，之后由AI生成图像。软件的使用条款声称所有创作的画作的版权均属用户所有，不论是个人还是公司。
+        </div>
+        <h1 class="title mdui-text-color-theme">Stable Diffusion是？</h1>
+        <div class="intro mdui-typo">
+            Stable
+            Diffusion是由初创公司StabilityAI于2022年发布的深度学习文本到图像模型。它主要用于根据文本的描述产生详细图像，尽管它也可以应用于其他任务，如修复、外画，以及在文本提示指导下产生图像到图像的翻译。
+            <br><br>
+            它是一种潜在扩散模型，由慕尼黑大学的研究人员开发的各种生成性人工神经网络。它是由StabilityAI，慕尼黑大学与Runway合作开发的，并得到EleutherAI和LAION的支持。截至2022年9月，StabilityAI正在洽谈以高达10亿美元的估值筹集资金。
+            <br><br>
+            Stable Diffusion的代码和模型权重已公开发布，可以在大多数配备有适度GPU的电脑硬件上运行。而以前的专有文本到图像模型（如DALL-E和Midjourney）只能通过云计算服务访问。
+        </div>
+        <h1 class="title mdui-text-color-theme">NovelAI泄露事件：</h1>
+        <div class="intro mdui-typo">
+            由于NovelAI官方定价不合理且态度消极，2022年10月7日，NovelAI的前端与后端以及部分模型，包括现用版本模型、VAE模型和HyperNetwork模型，大小约52.6GB，被4chan匿名用户公开。由于众多用户发现NovelAI基于Stable
+            Diffusion开源软件进行训练，所以用户并未站在NovelAI一方，相反开始大搞特搞NovelAI本地版本。<br>
+            <br>2022年10月9日，4chan匿名用户公布了NovelAI模型的第二部分。该部分包括了预训练的所有模型以及网络模型，大小约123.5GB。
+            <br>另，依据NovelAI官方承认，NovelAI的训练数据集的约21亿张图片，绝大部分来源于公开图片网站Danbooru。
+            <br><br>截至2022年10月12日，依据种子Tracker服务器的统计，NovelAI模型第一部分下载人数已经超过15,000人次，第二部分下载人数已经超过6,500人次。
+        </div>
+        <h1 class="title mdui-text-color-theme">使用NovelAI是否构成侵权？</h1>
+        <div class="intro mdui-typo">
+            与网络上大多数人的观点不同，Stable Diffusion中的Text Inversion，和人类婴幼儿的学习过程，本质上并无差别。<br>
+            <br>
+            NovelAI模型并非将图库中的图片简单剪切后堆砌，而是通过一组图片中的相同prompt，找到该prompt对应的图片特征，从而在神经网络节点中添加适合的参数，依照这些参数和它的权重，来迭代出相对应的图片。<br>
+            <br>
+            另外，NovelAI支持NLP，即自然语言处理。用户可以写一串描绘人物的英文长句，扔给AI，AI就会依据自然语言处理，返回用户一张基本符合你句子中大多特征的图片。这是其他众多的Stable Diffusion模型做不到的。<br>
+            <br>
+            所以，单论AI的学习行为，以及通过学习行为生成的数据，很难构成侵权。因为它与人类的学习行为并无二别。
+        </div>
+        <h1 class="title mdui-text-color-theme">NovelAI官网截图：</h1>
+        <div class="intro mdui-typo">
+            <img src="img/novelAI.png">
+        </div>
+        <h1 class="title mdui-text-color-theme">笔者基于NovelAI泄露模型生成的部分图片：</h1>
+        <div class="intro mdui-typo">
+            模型基于Stable Diffusion训练，可由<a href="https://github.com/AUTOMATIC1111">Automatic1111</a>的<a
+                href="https://github.com/AUTOMATIC1111/stable-diffusion-webui">Stable-Diffusion-Webui</a>进行生成。
+                <br>点击可查看大图。
+        </div>
+
+        <div class="gallery">
+            <div class="gallery__column">
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00101-3565975568-anime,best quality,illustration,1girl,cute,extremely detailed CG unity 8k wallpaper,{{white long hair}},looking at viewer,black.png" alt="Seed: 3565975568" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 3565975568</figcaption>
+                    </figure>
+                </a>
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00104-3981920528-anime,best quality,illustration,1girl,cute,extremely detailed CG unity 8k wallpaper,((white long hair)),looking at viewer,black.png" alt="Seed:  3981920528" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 3981920528</figcaption>
+                    </figure>
+                </a>
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00201-4004457084-beautiful detailed eyes, beautiful detailed sky, sun shine, cinematic lighting, dramatic angle, masterpiece,best quality,(((loli.png" alt="Seed: 4004457084" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 4004457084</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="gallery__column">
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00108-487397533-anime,best quality,illustration,1girl,cute,extremely detailed CG unity 8k wallpaper,((white long hair)),looking at viewer,black.png" alt="Seed: 487397533" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 487397533</figcaption>
+                    </figure>
+                </a>
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00254-228147155-masterpiece,best quality,loli,animal ears, looking back ,from behind,full body,white flower hair ornament, cute face, long hair,.png" alt="Seed: 228147155" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 228147155</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="gallery__column">
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00251-3620849744-masterpiece,best quality,loli,animal ears, looking back ,from behind,white flower hair ornament, cute face, long hair,white hair.png" alt="Seed: 3620849744" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 3620849744</figcaption>
+                    </figure>
+                </a>
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00218-937693225-beautiful detailed sky, sun shine,(full body_1.08), cinematic lighting, dramatic angle, masterpiece,best quality,(loli_1.02), (g.png" alt="Seed: 937693225" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 937693225</figcaption>
+                    </figure>
+                </a>
+                <a onclick="javascript:showBgImg(this);" class="gallery__link">
+                    <figure class="gallery__thumb">
+                        <img src="img/novelAIpreImg/00230-1873199685-beautiful detailed sky, sun shine,(full body_1.08), cinematic lighting, dramatic angle, masterpiece,best quality,(loli_1.02), (g.png" alt="Seed: 1873199685" class="gallery__image">
+                        <figcaption class="gallery__caption">Seed: 1873199685</figcaption>
+                    </figure>
+                </a>
+            </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('modal');
+        var bgImg = document.getElementById('bgImg');
+    
+    
+        function showBgImg(e) {
+            modal.style.display = 'contents';
+            bgImg.src = e.getElementsByTagName("img")[0].src;
+        }
+    
+        bgImg.onclick = function() {
+            modal.style.display = 'none';
+        }
+    </script>
+    <script src='js/nprogress.js'></script>
+    <script src="js/mdui.min.js"></script>
+</body>
+<footer>
+    <div id="copyright">
+        <p>&COPY;soloopooo@soloop.ooo,2022.</p>
+        <a href="https://soloop.ooo">soloop.ooo</a>
+        <p><br></p>
+    </div>
+</footer>
+
+</html>

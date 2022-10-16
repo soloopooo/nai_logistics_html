@@ -1,0 +1,6 @@
+other_artifacts/**
+other_artifacts
+.git
+.vscode
+.git/**
+.vscode/**
